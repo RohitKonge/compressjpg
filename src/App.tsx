@@ -56,14 +56,14 @@ function App() {
         maxSizeMB: 1,
         maxWidthOrHeight: 1920,
         useWebWorker: true,
-        fileType: 'image/png'
+        fileType: 'image/jpeg'
       });
 
       return {
         original: file,
         compressed: compressedBlob,
         preview: URL.createObjectURL(compressedBlob),
-        name: file.name.replace(/\.[^/.]+$/, "") + ".png",
+        name: file.name.replace(/\.[^/.]+$/, "") + ".jpg",
         originalSize: file.size,
         compressedSize: compressedBlob.size
       };
@@ -196,10 +196,10 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header className="text-center mb-16">
           <h1 className="text-7xl font-bold bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent mb-6">
-            Free Online PNG Compressor
+            Free Online JPG Compressor
           </h1>
           <p className="text-3xl text-secondary-600 mb-4 max-w-3xl mx-auto">
-            The smartest way to compress PNG images while preserving quality
+            The smartest way to compress JPG images while preserving quality
           </p>
           <div className="flex items-center justify-center space-x-4 text-sm text-secondary-500">
             <span className="flex items-center"><span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>No Registration</span>
@@ -228,7 +228,7 @@ function App() {
               ref={fileInputRef}
               className="hidden"
               multiple
-              accept="image/*"
+              accept="image/jpeg,image/jpg"
               onChange={(e) => e.target.files && handleFiles(e.target.files)}
               aria-label="Choose files to compress"
             />
@@ -242,7 +242,7 @@ function App() {
               <div className="text-center">
                 <Upload className="w-16 h-16 text-primary-400 mx-auto mb-6 animate-bounce-slow" aria-hidden="true" />
                 <h2 className="text-2xl font-semibold text-secondary-700 mb-2">
-                  Drop Your PNG Images Here
+                  Drop Your JPG Images Here
                 </h2>
                 <p className="text-secondary-500 mb-4">
                   or <span className="text-primary-500 hover:text-primary-600 cursor-pointer">browse your files</span>
@@ -252,7 +252,7 @@ function App() {
                   <span>•</span>
                   <span>Bulk compression</span>
                   <span>•</span>
-                  <span>PNG optimized</span>
+                  <span>JPG optimized</span>
                 </div>
               </div>
             )}
@@ -412,7 +412,7 @@ function App() {
 
         <footer className="text-center text-secondary-500 border-t border-secondary-200 pt-8">
           <p className="mb-4">Trusted by 100 million+ users worldwide for fast, secure image compression.</p>
-          <p className="text-sm">© 2004-{new Date().getFullYear()} PNG Compressor. All rights reserved.</p>
+          <p className="text-sm">© 2004-{new Date().getFullYear()} JPG Compressor. All rights reserved.</p>
         </footer>
       </div>
     </main>
