@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /
 Allow: /sitemap.xml
 Sitemap: https://compressjpg.live/sitemap.xml
 
